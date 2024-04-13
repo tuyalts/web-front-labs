@@ -11,12 +11,6 @@ main {
     margin: 10px 20px 45px;
     font-family: Arial;
 }
-footer {
-    background-color: azure;
-    color: black;
-    margin: 10px;
-    font-family: Arial
-}
 a {
     text-decoration: none;
     color:green;
@@ -25,7 +19,7 @@ a {
 a:link {
     color: green;
     text-decoration-line: underline;
-    background-color: brown;
+    background-color:darkgrey;
 }
 a:visited {
     color: indigo;
@@ -59,8 +53,9 @@ footer {
     padding: 10px;
     font-size: 16pt;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    position:static;
+    bottom: 100px;
     right: 0;
     left: 0;
+    margin: 10px;
 }
