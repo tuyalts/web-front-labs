@@ -19,6 +19,8 @@ footer {
 }
 a {
     text-decoration: none;
+    color:green;
+    transition: 1s 2s;
 }
 a:link {
     color: green;
@@ -34,6 +36,7 @@ a:hover {
     color: red;
     text-decoration: underline;
     background-color: darkgray;
+    transition: 0.3s;
 }
 a:active {
     color: black;
