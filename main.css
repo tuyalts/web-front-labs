@@ -20,3 +20,22 @@ footer {
 a {
     text-decoration: none;
 }
+a:link {
+    color: green;
+    text-decoration-line: underline;
+    background-color: brown;
+}
+a:visited {
+    color: indigo;
+    background-color:cadetblue;
+    text-decoration-line:line-through;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: darkgray;
+}
+a:active {
+    color: black;
+    opacity: 0.3;
+}
