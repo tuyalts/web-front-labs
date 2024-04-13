@@ -8,7 +8,7 @@ body {
 main {
     background-color: aquamarine;
     color: black;
-    margin: 5px;
+    margin: 10px 20px 45px;
     font-family: Arial;
 }
 footer {
@@ -41,4 +41,26 @@ a:hover {
 a:active {
     color: black;
     opacity: 0.3;
+}
+div.menu {
+    border: 7px solid #00880080;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+div.menu:hover {
+    background-color:burlywood;
+    box-shadow: 10px 10px #ff00aa30;
+    
+}
+footer {
+    background-color: black;
+    color: lightgreen;
+    padding: 10px;
+    font-size: 16pt;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
