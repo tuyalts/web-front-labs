@@ -59,3 +59,9 @@ footer {
     left: 0;
     margin: 10px;
 }
+header {
+    background-color: black; 
+    color: lightgreen; 
+    padding: 10px;
+    font-size: 14pt;>
+}
