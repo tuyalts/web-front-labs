@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ломбоцыренова Туяна Владимировна. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="D:\2курс\веб\favicon.ico" type="image/x-icon">
+    <link rel="icon" href="D:\2курс\веб\favicon-16x16.png">
+    <link rel="icon" href="D:\2курс\веб\favicon-32x32.png">
+    <style>
+        .color {
+            background-color: yellow; border-radius: 10px;
+            border: solid 1px;
+            margin: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: max-content;
+            padding: 30px;
+            text-align: center;
+            color: brown;
+            cursor: pointer;
+            transition: 1s;
+        }
+    </style>
+    <script>
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+            
+            if (color == 'Красный' && type == 'Футболка') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/rf.jpg";
+            }
+            else if (color == 'Красный' && type == 'Поло') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/rp.jpg";
+            }
+            else if (color == 'Красный' && type == 'Майка') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/rt.jpg";
+            }
+            else if (color == 'Белый' && type == 'Поло') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/wp.png";
+            }
+            else if (color == 'Белый' && type == 'Футблока') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/wf.jpg";
+            }
+            else if (color == 'Белый' && type == 'Майка') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/wt.jpg";
+            }
+            else if (color == 'Черный' && type == 'Поло') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/bp.jpeg";
+            }
+
+            else if (color == 'Черный' && type == 'Футболка') {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/bf.png";
+            }
+            else {
+                wear.src = "D:/2курс/веб/lab6.filter.imgs/bt.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет одежды: 
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select><br>    
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">OK</button><br>
+
+            <img id="wear" style="height: 600px; width: 500px;">
+        </div>
+    </main>
+
+    <footer>
+        &copy; Ломбоцыренова Туяна, ФБИ-24, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
