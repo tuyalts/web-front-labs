@@ -19,6 +19,17 @@
             height: min-content;
             text-align: center;
         }
+        .rule {
+            background-color: lightcyan; border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+            width: auto;
+            margin-top: 50px;
+            margin-left: 10px;
+            margin-right: auto;
+            height: min-content;
+            text-align:left;
+        }
     </style>
     <script>
         let number;
@@ -63,6 +74,15 @@
             document.getElementById('result').innerHTML = '';
             document.getElementById('user-number').value = '';
         }   
+        let ruleBl = document.getElementsByClassName('rule');
+        function showRules() {
+            ruleBl[0].style.display = 'none';
+            ruleBl[1].style.display = 'block';
+        }
+        function hideRules() {
+            ruleBl[1].style.display = 'none';
+            ruleBl[0].style.display = 'block';
+        }
     </script>
 </head>
 <body>
@@ -97,6 +117,23 @@
                 <button onclick="again()">Сыграть еще раз</button>
             </div>
         </div>
+
+        <div class="rule">
+            <button onclick="showRules()">Показать правила игры</button>
+        </div>
+
+        <div class="rule" style="display: none;">
+            <button onclick="hideRules()">Скрыть правила игры</button>
+            <ol type="A">
+                <li>Сначала нажмите на кнопку "сыграть в игру"</li>
+                <li>Потом делайте еще что-нибудь</li>
+                <li>потом еще что-то</li>
+                <li>потом еще... ну читайте что написано и всё а</li>
+                <li>если еще захотите сыграть, то играйте. читать умеете?</li>
+            </ol>
+        </div>
+            
+        
     </main>
 
     <footer>
