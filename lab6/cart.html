@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ломбоцыренова Туяна Владимировна. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="D:\2курс\веб\favicon.ico" type="image/x-icon">
+    <link rel="icon" href="D:\2курс\веб\favicon-16x16.png">
+    <link rel="icon" href="D:\2курс\веб\favicon-32x32.png">
+    <style>
+        td {
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function order() {
+            let balance = parseInt(document.getElementById('balance').value);
+            let message = document.getElementById('msg');
+            let milk = parseInt(document.getElementById('milk').value);
+            let bread = parseInt(document.getElementById('bread').value);
+            let butter = parseInt(document.getElementById('butter').value);
+            let result = milk*90 + bread*50 + butter*150;
+            let total = document.getElementById('total');
+            total = result.value; 
+            if (milk < 0 || bread < 0 || butter < 0 ) {
+                message.innerHTML = 'Кол-во товара не может быть отрицательным';
+                total.innerHTML = '';
+            }
+            else if ( balance < result) {
+                message.innerHTML = 'Общая сумма превышает баланс!';
+            }
+            else if (milk===0 && bread===0 && butter===0) {
+                message.innerHTML = 'Нужно выбрать хотя бы один товар';
+            }
+            else if (balance == result || balance > result) {
+                message.innerHTML = 'Заказ оформлен';
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <div style="margin-bottom: 10px;">Мой баланс: <input type="number" min="0" id="balance"></div>
+
+        <table border="1" style="width: max-content;">
+            
+            <tr style="font-weight: bold; text-align: center;">
+                <td></td>
+                <td>Название</td>
+                <td>Цена</td>
+                <td>Количество</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Молоко</td>
+                <td>90 p</td>
+                <td><input type="number" id="milk"></td>        
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Хлеб белый</td>
+                <td>50 p</td>
+                <td><input type="number" id="bread"></td>        
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Масло, 200 гр</td>
+                <td>150 p</td>
+                <td><input type="number" id="butter"></td>        
+            </tr>
+        </table>
+
+        <button style="margin: 10px;" onclick="order()">OK</button>
+        <div>Итого <span id="total"></span></div>
+        <div id="msg"></div>
+    </main>
+
+    <footer>
+        &copy; Ломбоцыренова Туяна, ФБИ-24, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
