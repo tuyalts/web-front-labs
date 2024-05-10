@@ -9,7 +9,7 @@ main {
     background-color: aquamarine;
     color: black;
     margin: 10px 20px 45px;
-    font-family: Arial;
+    padding: 5px;
 }
 a {
     text-decoration: none;
@@ -57,11 +57,10 @@ footer {
     bottom: 100px;
     right: 0;
     left: 0;
-    margin: 10px;
 }
 header {
     background-color: black; 
     color: lightgreen; 
     padding: 10px;
-    font-size: 14pt;>
+    font-size: 14pt;
 }
